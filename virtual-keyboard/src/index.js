@@ -1,70 +1,147 @@
-let keysArr = [
-    { key: '\`', capitalized: '~', length: 1 },
-    { key: '1', capitalized: '!', length: 1 },
-    { key: '2', capitalized: '@', length: 1 },
-    { key: '3', capitalized: '#', length: 1 },
-    { key: '4', capitalized: '$', length: 1 },
-    { key: '5', capitalized: '%', length: 1 },
-    { key: '6', capitalized: '^', length: 1 },
-    { key: '7', capitalized: '&', length: 1 },
-    { key: '8', capitalized: '*', length: 1 },
-    { key: '9', capitalized: '(', length: 1 },
-    { key: '0', capitalized: ')', length: 1 },
-    { key: '-', capitalized: '_', length: 1 },
-    { key: '=', capitalized: '+', length: 1 },
-    { key: 'Backspace', hidden: 'Backspace', length: 2 },
-    { key: 'Tab', length: 2 },  
-    { key: 'q', capitalized: 'Q', length: 1 },
-    { key: 'w', capitalized: 'W', length: 1 }, 
-    { key: 'e', capitalized: 'E', length: 1 }, 
-    { key: 'r', capitalized: 'R', length: 1 }, 
-    { key: 't', capitalized: 'T', length: 1 }, 
-    { key: 'y', capitalized: 'Y', length: 1 }, 
-    { key: 'u', capitalized: 'U', length: 1 }, 
-    { key: 'i', capitalized: 'I', length: 1 }, 
-    { key: 'o', capitalized: 'O', length: 1 }, 
-    { key: 'p', capitalized: 'P', length: 1 },
-    { key: '[', capitalized: '{', length: 1 }, 
-    { key: ']', capitalized: '}', length: 1 },  
-    { key: 'Del', hidden: 'Delete', length: 1 },
-    { key: 'Caps Lock', hidden: 'CapsLock', length: 2 },
-    { key: 'a', capitalized: 'A', length: 1 },
-    { key: 's', capitalized: 'S', length: 1 },
-    { key: 'd', capitalized: 'D', length: 1 }, 
-    { key: 'f', capitalized: 'F', length: 1 },
-    { key: 'g', capitalized: 'G', length: 1 },
-    { key: 'h', capitalized: 'H', length: 1 },
-    { key: 'j', capitalized: 'J', length: 1 },
-    { key: 'k', capitalized: 'K', length: 1 },
-    { key: 'l', capitalized: 'L', length: 1 },
-    { key: ';', capitalized: ':', length: 1 },
-    { key: '\'', capitalized: '\"', length: 1 },
-    { key: 'Enter', length: 2 },
-    { key: 'Shift', hidden: "ShiftLeft", length: 2 },
-    { key: 'z', capitalized: 'Z', length: 1 },
-    { key: 'x', capitalized: 'X', length: 1 },
-    { key: 'c', capitalized: 'C', length: 1 },
-    { key: 'v', capitalized: 'V', length: 1 },
-    { key: 'b', capitalized: 'B', length: 1 },
-    { key: 'n', capitalized: 'N', length: 1 },
-    { key: 'm', capitalized: 'N', length: 1 },
-    { key: ',', capitalized: 'M', length: 1 },
-    { key: '.', capitalized: '<', length: 1 },
-    { key: '/', capitalized: '>', length: 1 },
-    { key: '&uarr;', length: 1 },
-    { key: 'Shift', hidden: 'ShiftRight', length: 2 },
-    { key: 'Ctrl', hidden: 'ControlLeft', length: 1 },         
-    { key: 'Win', length: 1 },
-    { key: 'Alt', hidden: 'AltLeft', length: 1 },
-    { key: 'Space', length: 7 },
-    { key: 'Alt', hidden: 'AltRight', length: 1 },
-    { key: '&larr;', length: 1 },
-    { key: '&darr;', length: 1 },
-    { key: '&rarr;', length: 1 },
-    { key: 'Ctrl', hidden: 'ControlRight', length: 1 }
+let keysArrEn = [
+    { id: 1, key: '\`', capitalized: '~', length: 1 },
+    { id: 2, key: '1', capitalized: '!', length: 1 },
+    { id: 3, key: '2', capitalized: '@', length: 1 },
+    { id: 4, key: '3', capitalized: '#', length: 1 },
+    { id: 5, key: '4', capitalized: '$', length: 1 },
+    { id: 6, key: '5', capitalized: '%', length: 1 },
+    { id: 7, key: '6', capitalized: '^', length: 1 },
+    { id: 8, key: '7', capitalized: '&', length: 1 },
+    { id: 9, key: '8', capitalized: '*', length: 1 },
+    { id: 10, key: '9', capitalized: '(', length: 1 },
+    { id: 11, key: '0', capitalized: ')', length: 1 },
+    { id: 12, key: '-', capitalized: '_', length: 1 },
+    { id: 13, key: '=', capitalized: '+', length: 1 },
+    { id: 14, key: 'Backspace', hidden: 'Backspace', length: 2 },
+    { id: 15, key: 'Tab', length: 2 },  
+    { id: 16, key: 'q', capitalized: 'Q', length: 1 },
+    { id: 17, key: 'w', capitalized: 'W', length: 1 }, 
+    { id: 18, key: 'e', capitalized: 'E', length: 1 }, 
+    { id: 19, key: 'r', capitalized: 'R', length: 1 }, 
+    { id: 20, key: 't', capitalized: 'T', length: 1 }, 
+    { id: 21, key: 'y', capitalized: 'Y', length: 1 }, 
+    { id: 22, key: 'u', capitalized: 'U', length: 1 }, 
+    { id: 23, key: 'i', capitalized: 'I', length: 1 }, 
+    { id: 24, key: 'o', capitalized: 'O', length: 1 }, 
+    { id: 25, key: 'p', capitalized: 'P', length: 1 },
+    { id: 26, key: '[', capitalized: '{', length: 1 }, 
+    { id: 27, key: ']', capitalized: '}', length: 1 },  
+    { id: 28, key: 'Del', hidden: 'Delete', length: 1 },
+    { id: 29, key: 'Caps Lock', hidden: 'CapsLock', length: 2 },
+    { id: 30, key: 'a', capitalized: 'A', length: 1 },
+    { id: 31, key: 's', capitalized: 'S', length: 1 },
+    { id: 32, key: 'd', capitalized: 'D', length: 1 }, 
+    { id: 33, key: 'f', capitalized: 'F', length: 1 },
+    { id: 34, key: 'g', capitalized: 'G', length: 1 },
+    { id: 35, key: 'h', capitalized: 'H', length: 1 },
+    { id: 36, key: 'j', capitalized: 'J', length: 1 },
+    { id: 37, key: 'k', capitalized: 'K', length: 1 },
+    { id: 38, key: 'l', capitalized: 'L', length: 1 },
+    { id: 39, key: ';', capitalized: ':', length: 1 },
+    { id: 40, key: '\'', capitalized: '\"', length: 1 },
+    { id: 41, key: 'Enter', length: 2 },
+    { id: 42, key: 'Shift', hidden: "ShiftLeft", length: 2 },
+    { id: 43, key: 'z', capitalized: 'Z', length: 1 },
+    { id: 44, key: 'x', capitalized: 'X', length: 1 },
+    { id: 45, key: 'c', capitalized: 'C', length: 1 },
+    { id: 46, key: 'v', capitalized: 'V', length: 1 },
+    { id: 47, key: 'b', capitalized: 'B', length: 1 },
+    { id: 48, key: 'n', capitalized: 'N', length: 1 },
+    { id: 49, key: 'm', capitalized: 'N', length: 1 },
+    { id: 50, key: ',', capitalized: 'M', length: 1 },
+    { id: 51, key: '.', capitalized: '<', length: 1 },
+    { id: 52, key: '/', capitalized: '>', length: 1 },
+    { id: 53, key: '&uarr;', length: 1 },
+    { id: 54, key: 'Shift', hidden: 'ShiftRight', length: 2 },
+    { id: 55, key: 'Ctrl', hidden: 'ControlLeft', length: 1 },         
+    { id: 56, key: 'Win', length: 1 },
+    { id: 57, key: 'Alt', hidden: 'AltLeft', length: 1 },
+    { id: 58, key: 'Space', length: 7 },
+    { id: 59, key: 'Alt', hidden: 'AltRight', length: 1 },
+    { id: 60, key: '&larr;', length: 1 },
+    { id: 61, key: '&darr;', length: 1 },
+    { id: 62, key: '&rarr;', length: 1 },
+    { id: 63, key: 'Ctrl', hidden: 'ControlRight', length: 1 }
 ];
 
+let keysArrRu = [
+    { id: 1, key: 'ё', capitalized: 'Ё', length: 1 },
+    { id: 2, key: '1', capitalized: '!', length: 1 },
+    { id: 3, key: '2', capitalized: '\"', length: 1 },
+    { id: 4, key: '3', capitalized: '№', length: 1 },
+    { id: 5, key: '4', capitalized: ';', length: 1 },
+    { id: 6, key: '5', capitalized: '%', length: 1 },
+    { id: 7, key: '6', capitalized: ':', length: 1 },
+    { id: 8, key: '7', capitalized: '?', length: 1 },
+    { id: 9, key: '8', capitalized: '*', length: 1 },
+    { id: 10, key: '9', capitalized: '(', length: 1 },
+    { id: 11, key: '0', capitalized: ')', length: 1 },
+    { id: 12, key: '-', capitalized: '_', length: 1 },
+    { id: 13, key: '=', capitalized: '+', length: 1 },
+    { id: 14, key: 'Backspace', hidden: 'Backspace', length: 2 },
+    { id: 15, key: 'Tab', length: 2 },  
+    { id: 16, key: 'й', capitalized: 'Й', length: 1 },
+    { id: 17, key: 'ц', capitalized: 'Ц', length: 1 }, 
+    { id: 18, key: 'у', capitalized: 'У', length: 1 }, 
+    { id: 19, key: 'к', capitalized: 'К', length: 1 }, 
+    { id: 20, key: 'е', capitalized: 'Е', length: 1 }, 
+    { id: 21, key: 'н', capitalized: 'Н', length: 1 }, 
+    { id: 22, key: 'г', capitalized: 'Г', length: 1 }, 
+    { id: 23, key: 'ш', capitalized: 'Ш', length: 1 }, 
+    { id: 24, key: 'щ', capitalized: 'Щ', length: 1 }, 
+    { id: 25, key: 'з', capitalized: 'З', length: 1 },
+    { id: 26, key: 'х', capitalized: 'Х', length: 1 }, 
+    { id: 27, key: 'ъ', capitalized: 'Ъ', length: 1 },  
+    { id: 28, key: 'Del', hidden: 'Delete', length: 1 },
+    { id: 29, key: 'Caps Lock', hidden: 'CapsLock', length: 2 },
+    { id: 30, key: 'ф', capitalized: 'Ф', length: 1 },
+    { id: 31, key: 'ы', capitalized: 'Ы', length: 1 },
+    { id: 32, key: 'в', capitalized: 'В', length: 1 }, 
+    { id: 33, key: 'а', capitalized: 'А', length: 1 },
+    { id: 34, key: 'п', capitalized: 'П', length: 1 },
+    { id: 35, key: 'р', capitalized: 'Р', length: 1 },
+    { id: 36, key: 'о', capitalized: 'О', length: 1 },
+    { id: 37, key: 'л', capitalized: 'Л', length: 1 },
+    { id: 38, key: 'д', capitalized: 'Д', length: 1 },
+    { id: 39, key: 'ж', capitalized: 'Ж', length: 1 },
+    { id: 40, key: 'э', capitalized: 'Э', length: 1 },
+    { id: 41, key: 'Enter', length: 2 },
+    { id: 42, key: 'Shift', hidden: "ShiftLeft", length: 2 },
+    { id: 43, key: 'я', capitalized: 'Я', length: 1 },
+    { id: 44, key: 'ч', capitalized: 'Ч', length: 1 },
+    { id: 45, key: 'с', capitalized: 'С', length: 1 },
+    { id: 46, key: 'м', capitalized: 'М', length: 1 },
+    { id: 47, key: 'и', capitalized: 'И', length: 1 },
+    { id: 48, key: 'т', capitalized: 'Т', length: 1 },
+    { id: 49, key: 'ь', capitalized: 'Ь', length: 1 },
+    { id: 50, key: 'б', capitalized: 'Б', length: 1 },
+    { id: 51, key: 'ю', capitalized: 'Ю', length: 1 },
+    { id: 52, key: '.', capitalized: '.', length: 1 },
+    { id: 53, key: '&uarr;', length: 1 },
+    { id: 54, key: 'Shift', hidden: 'ShiftRight', length: 2 },
+    { id: 55, key: 'Ctrl', hidden: 'ControlLeft', length: 1 },         
+    { id: 56, key: 'Win', length: 1 },
+    { id: 57, key: 'Alt', hidden: 'AltLeft', length: 1 },
+    { id: 58, key: 'Space', length: 7 },
+    { id: 59, key: 'Alt', hidden: 'AltRight', length: 1 },
+    { id: 60, key: '&larr;', length: 1 },
+    { id: 61, key: '&darr;', length: 1 },
+    { id: 62, key: '&rarr;', length: 1 },
+    { id: 63, key: 'Ctrl', hidden: 'ControlRight', length: 1 }
+];
+
+let keysArr = keysArrEn;
+
 let capsLock = false;
+let lang = 'en';
+
+function getLocalStorage() {
+    if(localStorage.getItem('lang')) {
+      lang = localStorage.getItem('lang');
+      switchLang();
+    }
+    else lang = 'en';
+}
 
 document.addEventListener('DOMContentLoaded', function (e) {
 
@@ -96,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         key.dataset.key = keysArr[i].key;
         if(keysArr[i].hasOwnProperty('hidden')) key.dataset.hidden = keysArr[i].hidden;
         if(keysArr[i].hasOwnProperty('capitalized')) key.dataset.capital = keysArr[i].capitalized;
+        if(keysArr[i].hasOwnProperty('id')) key.dataset.id = keysArr[i].id;
         key.addEventListener('click', addChar);
         key.style.flex = keysArr[i].length;
         if(keysArr[i].key !== 'Space') key.innerHTML = keysArr[i].key;
@@ -118,9 +196,19 @@ document.addEventListener('DOMContentLoaded', function (e) {
     document.body.prepend(main);
 
     document.addEventListener('keydown', onKeyEvent);
+
+    getLocalStorage();
 });
 
 function onKeyEvent(event) {
+
+    if(event.shiftKey && event.altKey) {
+        if(lang == 'en') lang = 'ru';
+        else lang = 'en';
+        localStorage.setItem('lang', lang);
+        switchLang();
+    }
+    
     switch (event.key) {
         case ' ':
             onClick('Space');
@@ -343,5 +431,27 @@ function addChar(event) {
             default:
                 break;
         }
+    }
+}
+
+function switchLang() {   
+    if(lang == 'en') keysArr = keysArrEn;
+    else keysArr = keysArrRu;
+
+    let keys = document.querySelectorAll('.key');
+    for (let i = 0; i < keys.length; i++) {
+        let currId = keys[i].dataset.id;
+        let newKey;
+        for(let elem of keysArr) {
+            if(elem.id == currId) {
+                newKey = elem;         
+                break;
+            }
+        }       
+        keys[i].dataset.key = newKey.key;
+        if(newKey.hasOwnProperty('hidden')) keys[i].dataset.hidden = newKey.hidden;
+        if(newKey.hasOwnProperty('capitalized')) keys[i].dataset.capital = newKey.capitalized;
+        keys[i].addEventListener('click', addChar);
+        if(keys[i].dataset.key !== 'Space') keys[i].innerHTML = newKey.key;
     }
 }
